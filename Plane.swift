@@ -22,10 +22,9 @@ struct PlaneView: View {
                     offsetValue = value.translation
                 }
                 .onEnded {value in
-                    // update position but snap back into valid bounds
-                        // update position normally
-                        initialPosition = CGPoint(x: initialPosition.x + value.translation.width, y: initialPosition.y + value.translation.height)
-                        offsetValue = .zero
+                    // update position
+                    initialPosition = CGPoint(x: initialPosition.x + value.translation.width, y: initialPosition.y + value.translation.height)
+                    offsetValue = .zero
                 }
         )
     }
